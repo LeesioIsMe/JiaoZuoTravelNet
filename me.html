@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人中心-订单管理</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:1000px;
+            margin:50px auto;
+        }
+        table,td,th{
+            border:1px solid #333;
+            border-collapse: collapse;
+        }
+        table{
+            margin-top:20px;
+            width:1000px;
+            border-left:none;
+            border-right:none;
+        }
+        tr:first-child{
+            border-top:3px solid #333;
+        }
+        tr td:first-child{
+            width:200px;
+            border-left:none;
+            text-align: center;
+        }
+        th:first-child{
+            border-left:none;
+        }
+        th:last-child{
+            border-right:none;
+        }
+        tr td:nth-child(2){
+            width:600px;
+            padding:0 0 0 20px;
+            letter-spacing: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        tr td:last-child{
+            width:200px;
+            border-right:none;
+            text-align: center;
+            color:rgb(233,50,50);
+        }
+        tr{
+            height:50px;
+            line-height:50px;
+        }
+        .rentou{
+            width:114px;
+            height:114px;
+            /* border:1px solid red; */
+            float:left;
+        }
+        .info{
+            float:left;
+            margin-left:100px;
+            padding:20px;
+        }
+        .userName{
+            font-size: 20px;
+            color:#333;
+        }
+        .time{
+            line-height: 30px;
+            font-size:16px;
+            margin-top:20px;
+            /* border:1px solid red; */
+        }
+        .time span{
+            width:300px;
+            height:30px;
+            line-height:30px;
+            display:inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="me">
+            <div class="rentou">
+                <img src="images/rentou.png" alt="">
+            </div>
+            <div class="info">
+                <p class="userName">
+                    13462229618
+                </p>
+                <p class="time">登录时间：<span></span></p>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>景区</th>
+                <th>时间</th>
+                <th>价格</th>
+            </tr>
+            <tr>
+                <td>云台山</td>
+                <td>2018-12-15  10:30:20</td>
+                <td>￥120</td>
+            </tr>
+            <tr>
+                <td>影视城</td>
+                <td>2018-12-16  10:30:20</td>
+                <td>￥20</td>
+            </tr>
+            <tr>
+                <td>陈家沟</td>
+                <td>2018-12-17  10:30:20</td>
+                <td>￥10</td>
+            </tr>
+            <tr>
+                <td>嘉应观</td>
+                <td>2018-12-18  10:30:20</td>
+                <td>￥30</td>
+            </tr>
+            <tr>
+                <td>青天河</td>
+                <td>2018-12-19  10:30:20</td>
+                <td>￥50</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+    <script>
+        function getTime(){
+            var time = document.querySelector(".time span");
+            var d = new Date();
+            var year = d.getFullYear();
+            var month = d.getMonth() +1;  
+            var date = d.getDate();  
+            var day = d.getDay();     
+            var hours = d.getHours();  
+            var minutes = d.getMinutes();  
+            var seconds = d.getSeconds();  
+            switch (day) {
+                    case 0: day = "星期日"; break;
+                    case 1: day = "星期一"; break;
+                    case 2: day = "星期二"; break;
+                    case 3: day = "星期三"; break;
+                    case 4: day = "星期四"; break;
+                    case 5: day = "星期五"; break;
+                    case 6: day = "星期六"; break;
+                    default:
+                        break;
+                }
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            time.innerHTML = `${year}年${month}月${date}日 ${hours}:${minutes}:${seconds} ${day}`;
+        }
+        getTime();
+    </script>
+</body>
+
+</html>

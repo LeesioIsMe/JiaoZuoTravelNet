@@ -1,0 +1,241 @@
+html {
+
+	padding:10px;
+	margin:10px;
+	
+}
+.container {
+	margin:0px;
+	
+}
+
+.links{
+	
+}
+a{
+	text-decoration:none;
+}
+.links a {
+	margin-left:80px;
+	text-decoration:none;
+	color:black;
+}
+
+.jzly {	
+	font-size:30px;
+	margin-left:200px;
+	height:50px;
+}
+.jzly a{	
+	color:#0F0;
+}
+.guides {
+	
+	margin-top:-35px;
+	margin-left:450px;
+}
+
+.login {
+	font-size:20px;
+	margin-left:1400px;
+	margin-top:-25px;
+	
+}
+.login a{
+	color:#003;
+	margin-left:0px;
+}
+
+
+a:hover {
+	color:#666;		
+}
+
+* {box-sizing:border-box}
+body {
+	font-family: Verdana,sans-serif;
+}
+.mySlides {display:none;}
+
+/* 幻灯片容器 */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top:50px;
+}
+
+/* 下一张 & 上一张 按钮 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* 定位 "下一张" 按钮靠右 */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* 标题文本 */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 数字文本 (1/3 等) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* 标记符号 */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* 淡出动画 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.lyzx {
+	margin-top:80px;
+	
+}
+.lyzxheader {
+	padding-left:630px;
+	margin-left:-5px;
+}
+.lyzxheader li{
+	list-style:none;
+	float:left;
+	margin-left:100px;
+}
+.zxdt,.zthd,.jqhd{
+	float:left;
+	margin-top:50px;
+	margin-bottom:100px;
+}
+.zthd,.jqhd{
+	display:none;
+}
+
+.zxdt a,.zthd a,.jqhd a {
+	float:left;
+	margin-left:200px;
+}
+
+.footer{
+	margin-top:100px;
+	padding:30px 0px 30px 300px;
+	background:#444;
+	color:white;
+	height:200px;
+}
+.copyright{
+	float:left;
+}
+.contact{
+	float:right;
+	margin-top:50px;
+	margin-right:200px;
+}
+.copyright a{
+	color:white;
+}
+.copyright a:hover{
+	color:#aeb;
+}
+#showcontact {
+	float:right;
+	margin-top:-20px;
+	margin-right:-380px;
+	width:200px;
+	text-align:center;
+	color:white;
+	background:#52e43b;
+}
+#showcontact p{
+	display:none;
+}
+#showcontact img {
+	width:100px;
+	height:130px;
+}
+.clear{
+	clear:both;
+	
+}
+
+.buy{
+	display:inline-block;
+	padding:10px 20px;
+	border:3px solid rgba(0,0,0,0.5);
+	background:rgba(0,0,0,0.5);
+	border-radius:3px;
+	cursor: pointer;
+	position: absolute;
+	bottom:100px;
+	left:450px;
+}
+.buy a{
+	text-decoration: none;
+	color:#ddd;
+	display:inline-block;
+	height:100%;
+	line-height: 100%;
+}
+.buy:hover{
+	border:3px solid rgba(255,255,100,0.5);
+	background:rgba(255,255,255,0.5);
+}
+.buy:hover a{
+	color:#333;
+	font-weight: bold;
+}

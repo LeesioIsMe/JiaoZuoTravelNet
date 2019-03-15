@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:1000px;
+            margin:200px auto;
+        }
+        .ticket{
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+        .title{
+            text-align: center;
+        }
+        h2{
+            font-weight: normal;
+            font-size:26px;
+            background:rgb(110,150,255);
+        }
+        ul{
+            list-style: none;
+        }
+        ul li {
+            height:50px;
+            font-size:20px;
+            background:#eee;
+            border-bottom:1px solid #ccc;
+            padding:0 0 0 10px;
+        }
+        ul li span{
+            line-height: 50px;
+        }
+        .price,.order{
+            float:right;
+            margin-left:20px;
+            display:inline-block;
+        }
+        .price{
+            color:rgb(200,50,50);
+        }
+        .order{
+            height:30px;
+            line-height: 30px;
+            margin-right:20px;
+            margin-top:10px;
+            padding:0px 10px;
+            color:#fff;
+            background:orange;
+            cursor:pointer;
+        }
+        .clearfix:after{
+            clear:both;
+            content:"";
+            height: 0;
+            visibility: hidden;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="ticket">
+            <h2>门票</h2>
+            <ul>
+                <li class="title">
+                    <span>云台山风景名胜区淡季门票+往返交通车票</span>
+                </li>
+                <li class="clearfix">
+                    <span class="kind">成人票</span>
+                    <span class="order">预订</span>
+                    <span class="price">￥120</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="kind">儿童票</span>
+                    <span class="order">预订</span>
+                    <span class="price">￥120</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="kind">老人票</span>
+                    <span class="order">预订</span>
+                    <span class="price">￥120</span>
+
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

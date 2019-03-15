@@ -1,0 +1,25 @@
+#contents {
+	text-align:center;
+	
+}
+
+ul {
+	list-style:none;
+}
+.footer{
+	margin-top:100px;
+	padding:30px 0px 30px 300px;
+	background:#444;
+	color:white;
+}
+.copyright{
+	float:left;
+}
+.contact{
+	float:right;
+	margin-top:50px;
+	margin-right:300px;
+}
+.clear{
+	clear:both;
+}

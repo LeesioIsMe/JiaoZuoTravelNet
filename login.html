@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>焦作旅游 - 游客登录</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="author" content="LXHLYL" />
+	<meta name="keywords" content="游客登录">
+	<link type="text/css" rel="stylesheet" href="css/login.css">
+	<link type="text/css" rel="stylesheet" href="css/photo.css">
+	<script>
+		var conn = new ActiveXObject("ADODB.Connection");
+		var rs = new ActiveXObject("ADODB.Recordset");
+		try {
+			var connectionstring = "Driver={MySQL ODBC 5.2w Driver};Server=localhost;Database=user;User=root; Password=123456;Option=3;Port=3306";
+
+			conn.open(connectionstring);
+
+			var sql = " select * from tb_col ";
+
+			rs.open(sql, conn);
+
+			while (!rs.eof) {
+
+				WScript.Echo(rs.Fields("id") + "\t" + rs.Fields("name") + "\n");
+
+
+				rs.moveNext();
+			}
+
+			rs.close();
+
+			conn.close();
+		} catch (e) {
+
+
+		} finally {
+
+		}
+
+	</script>
+</header>
+
+<body style="background-image:url(images/lyh.jpg);background-repeat:no-repeat;background-attachment:fixed;background-size:100%;">
+	<!-- header -->
+	<div class="links">
+		<div class="jzly">
+			<a href="index.html"><img src="images/jzly.jpg" /></a>
+		</div>
+		<div class="guides">
+			<a href="http://zx.hnjzta.gov.cn/gkxx.jhtml">探索焦作</a>
+			<a href="http://zx.hnjzta.gov.cn/images.jspx?id=138">印象焦作</a>
+			<a href="http://zx.hnjzta.gov.cn/waresjingqu/index.jhtml">畅游焦作</a>
+			<a href="http://zx.hnjzta.gov.cn/yhxx/index.jhtml">资讯动态</a>
+			<a href="http://zx.hnjzta.gov.cn/lygl/index.jhtml">旅游指南</a>
+			<a href="http://zx.hnjzta.gov.cn/bmdh/index.jhtml">旅游助手</a>
+		</div>
+		<div class="login">
+			<a href="login.html" id="user">游客登录</a>
+			<a href="#">注册</a>
+		</div>
+
+	</div>
+
+	<!-- login -->
+	<div class="register-box login-box">
+
+		<div class="register-nav"><span>会员登录</span></div>
+		<hr style="width:500px;">
+		<form id="jvForm" action="loginsuccess.html" method="post">
+
+			<div class="inf-message">
+				<input type="hidden" name="returnUrl" value="/" />
+			</div>
+
+			<div class="username"><i></i><input id="username" name="username" class="required login-input" type="text"
+				 placeholder="用户名" required>
+				<img id="username-img" src="images/yhm.jpg" width="30px" height="30px" />
+			</div>
+
+			<div class="password"><i></i><input id="password" name="password" class="required password-input" type="password"
+				 placeholder="密码" required>
+				<img id="password-img" src="images/mm.jpg" width="30px" height="30px" />
+			</div>
+
+			<input type="submit" class="login-btn" value="登 录" id="login" />
+			<a href="register.html"><input type="button" class="login-btn" value="注 册" /></a>
+
+
+		</form>
+	</div>
+
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="copyright">
+			<p><a>关于本站</a>&nbsp;&nbsp;<a>版权声明</a>&nbsp;&nbsp;<a>网站地图</a>&nbsp;&nbsp;<a>友情链接</a>&nbsp;&nbsp;<a>联系我们</a>&nbsp;&nbsp;<a>全文搜索</a></p>
+			<p>河南省焦作市旅游局|热线电话：0391-3569651</p>
+			<p>COPYRIGHT © 2018 豫ICP备14004153号</p>
+		</div>
+		<div class="contact">
+			<a href="#"><img src="images/dianhua.jpg"></a>&nbsp;&nbsp;
+			<a href="#"><img src="images/weixin.jpg"></a>&nbsp;&nbsp;
+			<a href="#"><img src="images/weibo.jpg"></a>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+
+</body>
+
+</html>
